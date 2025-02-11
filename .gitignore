@@ -17,13 +17,13 @@ logs
 
 # extensions build output
 extensions/*/build
+extensions/*/dist
 
 # lock files
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
 
-# Custom
-/.idea
-.idea
-shopify.app.toml
+
+
+
+# Ignore shopify files created during app dev
+.shopify/*
+.shopify.lock

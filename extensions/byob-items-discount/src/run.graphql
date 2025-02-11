@@ -1,0 +1,21 @@
+query RunInput {
+  cart {
+    lines {
+      id
+      quantity
+      item_byob: attribute(key: "_byob_current_discount") {
+        value
+      }
+      merchandise {
+        __typename
+        ... on ProductVariant {
+          id
+          product {
+            id
+            title
+          }
+        }
+      }
+    }
+  }
+}
